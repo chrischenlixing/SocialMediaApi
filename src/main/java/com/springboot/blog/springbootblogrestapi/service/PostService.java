@@ -1,7 +1,5 @@
 package com.springboot.blog.springbootblogrestapi.service;
 
-import java.util.List;
-
 import com.springboot.blog.springbootblogrestapi.payload.PostDto;
 import com.springboot.blog.springbootblogrestapi.payload.PostResponse;
 
