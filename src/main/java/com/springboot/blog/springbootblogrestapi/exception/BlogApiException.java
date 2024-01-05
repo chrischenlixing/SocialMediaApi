@@ -2,7 +2,6 @@ package com.springboot.blog.springbootblogrestapi.exception;
 
 import org.springframework.http.HttpStatus;
 
-import io.micrometer.core.ipc.http.HttpSender;
 
 /**
  * BlogApiException
