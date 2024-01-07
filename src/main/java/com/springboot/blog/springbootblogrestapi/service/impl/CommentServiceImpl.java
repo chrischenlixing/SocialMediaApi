@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import com.springboot.blog.springbootblogrestapi.entity.Comment;
 import com.springboot.blog.springbootblogrestapi.entity.Post;
 import com.springboot.blog.springbootblogrestapi.exception.BlogApiException;
-import com.springboot.blog.springbootblogrestapi.exception.ResourceNotFoundException;
+import com.springboot.blog.springbootblogrestapi.payload.ResourceNotFoundException;
 import com.springboot.blog.springbootblogrestapi.payload.CommentDto;
 import com.springboot.blog.springbootblogrestapi.repository.CommentRepository;
 import com.springboot.blog.springbootblogrestapi.repository.PostRepository;

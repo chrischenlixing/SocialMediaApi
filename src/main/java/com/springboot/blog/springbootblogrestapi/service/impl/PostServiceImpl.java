@@ -11,7 +11,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import com.springboot.blog.springbootblogrestapi.entity.Post;
-import com.springboot.blog.springbootblogrestapi.exception.ResourceNotFoundException;
+import com.springboot.blog.springbootblogrestapi.payload.ResourceNotFoundException;
 import com.springboot.blog.springbootblogrestapi.payload.PostDto;
 import com.springboot.blog.springbootblogrestapi.payload.PostResponse;
 import com.springboot.blog.springbootblogrestapi.repository.PostRepository;
