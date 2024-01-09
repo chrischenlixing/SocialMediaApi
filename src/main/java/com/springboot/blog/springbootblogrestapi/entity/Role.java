@@ -1,7 +1,5 @@
 package com.springboot.blog.springbootblogrestapi.entity;
 
-import org.hibernate.annotations.ManyToAny;
-import org.hibernate.mapping.Set;
 
 
 import jakarta.persistence.Column;

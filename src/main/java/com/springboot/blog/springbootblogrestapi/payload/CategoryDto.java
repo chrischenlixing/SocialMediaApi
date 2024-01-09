@@ -1,5 +1,6 @@
 package com.springboot.blog.springbootblogrestapi.payload;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,10 +10,9 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class RegisterDto {
+public class CategoryDto {
+
+    private Long id;
     private String name;
-    private String username;
-    private String email;
-    private String password;
-    
+    private String description;
 }

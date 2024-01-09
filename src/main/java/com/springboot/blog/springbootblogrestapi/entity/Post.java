@@ -3,16 +3,7 @@ package com.springboot.blog.springbootblogrestapi.entity;
 import java.util.HashSet;
 import java.util.Set;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
-import jakarta.persistence.UniqueConstraint;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,7 +15,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 @Table(
-    name = "post", uniqueConstraints = {@UniqueConstraint(columnNames = {"title"})}
+    name = "posts", uniqueConstraints = {@UniqueConstraint(columnNames = {"title"})}
 )
 
 public class Post {
@@ -43,6 +34,10 @@ public class Post {
     @Column(name="content",nullable = false)
     private String content;
 
-    @OneToMany(mappedBy = "post", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "post", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Comment> comments = new HashSet<>();
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "category_id")
+    private Category category;
 }

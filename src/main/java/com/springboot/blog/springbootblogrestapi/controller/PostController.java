@@ -1,5 +1,7 @@
 package com.springboot.blog.springbootblogrestapi.controller;
 
+import java.util.List;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -64,8 +66,14 @@ public class PostController {
     @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deletePost(@PathVariable long id){
-        postService.deletePost(id);
+        postService.deletePostById(id);
         return new ResponseEntity<>("post entity deleted successfully.", HttpStatus.OK);
 
+    }
+
+    @GetMapping("/category/{id}")
+    public ResponseEntity<List<PostDto>> getPostsByCategory(@PathVariable("id") Long categoryId){
+        List<PostDto> postDtos = postService.getPostsByCategory(categoryId);
+        return ResponseEntity.ok(postDtos);
     }
 }
