@@ -22,9 +22,18 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import com.springboot.blog.springbootblogrestapi.security.JwtAuthenticationEntryPoint;
 import com.springboot.blog.springbootblogrestapi.security.JwtAuthenticationFilter;
 
+import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
+import io.swagger.v3.oas.annotations.security.SecurityScheme;
+
 
 @Configuration
 @EnableMethodSecurity
+@SecurityScheme(
+    name = "Bear Authentication",
+    type = SecuritySchemeType.HTTP,
+    bearerFormat = "JWT",
+    scheme = "bearer"
+)
 public class SecurityConfig {
 
 
@@ -59,6 +68,8 @@ public class SecurityConfig {
                         authorize.requestMatchers(HttpMethod.GET, "/api/**").permitAll()
                                 .requestMatchers("/api/auth/**").permitAll()
                                 // .requestMatchers(HttpMethod.GET, "/api/categories/**").permitAll()
+                                .requestMatchers("/swagger-ui/**").permitAll()
+                                .requestMatchers("/v3/api-docs/**").permitAll()
                                 .anyRequest().authenticated()
 
                 ).exceptionHandling(exception -> exception
@@ -78,6 +89,11 @@ public class SecurityConfig {
     //             .password(passwordEncoder().encode("980724clxlyc"))
     //             .roles("USER") // Spring internally prefixes with ROLE_
     //             .build();
+
+    private Object requestMatchers(String string) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'requestMatchers'");
+    }
     
     //     UserDetails admin = User.builder()
     //             .username("admin")
