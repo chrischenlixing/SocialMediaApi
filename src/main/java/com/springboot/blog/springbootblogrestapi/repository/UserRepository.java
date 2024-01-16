@@ -1,13 +1,10 @@
 package com.springboot.blog.springbootblogrestapi.repository;
 
 
-import javax.swing.text.html.Option;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import com.springboot.blog.springbootblogrestapi.entity.User;
-import java.util.List;
 import java.util.Optional;
 
 

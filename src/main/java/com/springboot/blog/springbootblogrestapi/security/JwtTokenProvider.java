@@ -1,8 +1,6 @@
 package com.springboot.blog.springbootblogrestapi.security;
 
 
-
-import java.security.Key;
 import java.util.Date;
 
 import javax.crypto.SecretKey;

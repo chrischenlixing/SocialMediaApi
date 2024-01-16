@@ -36,11 +36,6 @@
 			<artifactId>jaxb-runtime</artifactId>
 			<scope>provided</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.glassfish.jaxb</groupId>
-			<artifactId>jaxb-runtime</artifactId>
-			<scope>provided</scope>
-		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
