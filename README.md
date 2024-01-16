@@ -1,8 +1,8 @@
-# README: Social Media App REST API Project Using Spring Boot
+# README: Chris's Social Media App REST API Project Using Spring Boot
 
 ## Project Overview
 
-This project demonstrates the development of a fully functional REST API for a Social Media application using Spring Boot. It showcases the implementation of advanced features such as security with JWT, Spring Data JPA relationships, and API documentation. This project is an excellent reference for developers looking to understand real-world application of Spring Boot in API development.
+This project demonstrates the development of a fully functional REST API for a Social Media application using Spring Boot. It showcases the implementation of advanced features such as security with JWT, Spring Data JPA relationships, and API documentation. This project demostrates my understanding of real-world application of Spring Boot in API development.
 
 ![Page1 of Swagger UI](./src/images/SpringAPI1.jpg)
 ![Page2 of Swagger UI](./src/images/SpringAPI2.jpg)
