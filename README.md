@@ -1,4 +1,4 @@
-# README: Chris's Social Media App REST API Project Using Spring Boot
+# Chris's Social Media App REST API Project Using Spring Boot
 
 ## Project Overview
 
